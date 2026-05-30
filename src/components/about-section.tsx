@@ -1,12 +1,19 @@
+import Image from "next/image";
+
 export function AboutSection() {
   return (
     <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-        <div className="w-full max-w-xs sm:max-w-sm mx-auto lg:mx-0 order-1 lg:order-none">
-          <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-[#4b5694] to-[#7288ae] overflow-hidden border-4 border-[#eae0cf]">
-            <div className="w-full h-full flex items-center justify-center text-white text-base sm:text-lg px-4 text-center">
-              Professional Photo
-            </div>
+        <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] mx-auto lg:mx-0 order-1 lg:order-none">
+          <div className="relative aspect-[2/3] overflow-hidden rounded-[2rem] border-4 border-[#eae0cf] bg-[#f4efe5] shadow-lg">
+            <Image
+              src="/listedbyjeff-about.svg"
+              alt="Professional photo of Jeff"
+              fill
+              priority
+              sizes="(min-width: 1024px) 360px, (min-width: 640px) 320px, 280px"
+              className="scale-[1.06] object-cover object-[56%_40%]"
+            />
           </div>
         </div>
         <div className="text-center lg:text-left order-2">

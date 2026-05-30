@@ -9,7 +9,7 @@ interface PropertyCardProps {
 export function PropertyCard({ listing }: PropertyCardProps) {
   return (
     <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-[#7288ae]/20 group cursor-pointer h-full flex flex-col">
-      <div className="relative aspect-square overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden bg-[#f4efe5]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={listing.image}

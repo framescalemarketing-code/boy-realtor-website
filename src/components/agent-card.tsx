@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import { AgentPhoto } from "./agent-photo";
 
 type AgentCardVariant = "header" | "inline";
 
@@ -10,10 +11,8 @@ export function AgentCard({ variant }: AgentCardProps) {
   if (variant === "header") {
     return (
       <div className="flex items-center gap-3 sm:gap-4 bg-[#eae0cf]/30 rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-[#7288ae]/20 w-full">
-        <div className="w-20 h-24 sm:w-24 sm:h-32 rounded-lg bg-gradient-to-br from-[#4b5694] to-[#7288ae] overflow-hidden shrink-0">
-          <div className="w-full h-full flex items-center justify-center text-white text-xs sm:text-sm bg-[#4b5694]">
-            Photo
-          </div>
+        <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-[#7288ae]/20 bg-[#eae0cf] sm:h-24 sm:w-24">
+          <AgentPhoto priority sizes="(min-width: 640px) 96px, 80px" />
         </div>
         <div className="min-w-0 flex-1">
           <div className="text-base sm:text-lg text-[#111844]">Jeff Lastname</div>
@@ -42,11 +41,9 @@ export function AgentCard({ variant }: AgentCardProps) {
   }
 
   return (
-    <div className="flex items-center gap-2.5 sm:gap-3 mb-2 sm:mb-3 p-2.5 sm:p-3 bg-[#eae0cf]/20 rounded-xl min-w-0">
-      <div className="w-12 h-14 sm:w-14 sm:h-16 rounded-lg bg-gradient-to-br from-[#4b5694] to-[#7288ae] overflow-hidden shrink-0">
-        <div className="w-full h-full flex items-center justify-center text-white text-[10px] sm:text-xs bg-[#4b5694]">
-          Photo
-        </div>
+    <div className="flex items-center gap-3.5 sm:gap-4 mb-2 sm:mb-3 p-3 sm:p-3.5 bg-[#eae0cf]/20 rounded-xl min-w-0">
+      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-[#7288ae]/20 bg-[#eae0cf] sm:h-20 sm:w-20">
+        <AgentPhoto sizes="(min-width: 640px) 80px, 64px" />
       </div>
       <div className="flex-1 min-w-0">
         <div className="text-sm text-[#111844] truncate">Jeff Lastname</div>
