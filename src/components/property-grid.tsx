@@ -8,13 +8,14 @@ interface PropertyGridProps {
 
 export function PropertyGrid({ listings }: PropertyGridProps) {
   return (
-    <div id="homes" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <div className="mb-8 sm:mb-10 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-8">
+    <div id="homes" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <div className="mb-10 sm:mb-14 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 lg:gap-8">
         <div className="min-w-0">
-          <h2 className="text-2xl sm:text-3xl text-[#111844] mb-2">
+          <p className="eyebrow text-[#7288ae] mb-3">Featured Listings</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-[#111844] mb-3">
             Available Homes
           </h2>
-          <p className="text-[#4b5694] text-base sm:text-lg">
+          <p className="text-[#4b5694] text-base sm:text-lg font-light">
             Discover your perfect home in beautiful San Diego
             {listings.length > 0 && (
               <span className="block text-sm sm:text-base mt-1 text-[#7288ae]">
@@ -38,7 +39,7 @@ export function PropertyGrid({ listings }: PropertyGridProps) {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 min-[1280px]:grid-cols-3 gap-6 sm:gap-7 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 min-[1280px]:grid-cols-3 gap-7 sm:gap-8 max-w-[1400px] mx-auto">
           {listings.map((listing) => (
             <PropertyCard key={listing.id} listing={listing} />
           ))}

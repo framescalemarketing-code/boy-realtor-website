@@ -4,7 +4,7 @@ export const mockListings: Listing[] = [
   {
     id: "1",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
     price: "$625,000",
     priceValue: 625000,
     address: "1234 Pacific Beach Dr",
@@ -20,7 +20,7 @@ export const mockListings: Listing[] = [
   {
     id: "2",
     image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
     price: "$725,000",
     priceValue: 725000,
     address: "5678 Ocean View Blvd",
@@ -36,7 +36,7 @@ export const mockListings: Listing[] = [
   {
     id: "3",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
     price: "$550,000",
     priceValue: 550000,
     address: "910 Sunset Cliffs Ave",
@@ -52,7 +52,7 @@ export const mockListings: Listing[] = [
   {
     id: "4",
     image:
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
     price: "$795,000",
     priceValue: 795000,
     address: "2345 La Jolla Shores Dr",
@@ -68,7 +68,7 @@ export const mockListings: Listing[] = [
   {
     id: "5",
     image:
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80",
     price: "$675,000",
     priceValue: 675000,
     address: "3456 Mission Bay Dr",
@@ -84,7 +84,7 @@ export const mockListings: Listing[] = [
   {
     id: "6",
     image:
-      "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80",
     price: "$825,000",
     priceValue: 825000,
     address: "7890 Coronado Beach Blvd",

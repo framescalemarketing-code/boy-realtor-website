@@ -8,30 +8,31 @@ interface PropertyCardProps {
 
 export function PropertyCard({ listing }: PropertyCardProps) {
   return (
-    <div className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-[#7288ae]/20 group cursor-pointer h-full flex flex-col">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-luxe hover:shadow-luxe-lg transition-shadow duration-300 border border-[#7288ae]/15 group cursor-pointer h-full flex flex-col">
       <div className="relative aspect-[4/3] overflow-hidden bg-[#f4efe5]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={listing.image}
           alt={listing.address}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
         />
-        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-[#111844] text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-sm sm:text-base font-medium">
+        <div className="absolute inset-0 bg-linear-to-t from-[#111844]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/95 backdrop-blur-sm text-[#111844] px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-medium tracking-wide shadow-sm">
           {listing.price}
         </div>
         {listing.isNew && (
-          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#4b5694] text-white px-2.5 py-1 sm:px-3 rounded-lg text-xs sm:text-sm">
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-[#111844] text-[#eae0cf] px-3 py-1 sm:px-3.5 rounded-full text-xs uppercase tracking-[0.15em]">
             New
           </div>
         )}
       </div>
 
-      <div className="p-4 sm:p-5 flex flex-col flex-1">
-        <div className="mb-2 sm:mb-3 min-w-0">
-          <h3 className="text-lg text-[#111844] mb-1 line-clamp-2">
+      <div className="p-5 sm:p-6 flex flex-col flex-1">
+        <div className="mb-3 sm:mb-4 min-w-0">
+          <h3 className="text-xl text-[#111844] mb-1.5 line-clamp-2">
             {listing.address}
           </h3>
-          <div className="flex items-start gap-1 text-[#4b5694]">
+          <div className="flex items-start gap-1.5 text-[#4b5694]">
             <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
             <span className="text-sm break-words">{listing.city}</span>
           </div>
@@ -62,7 +63,7 @@ export function PropertyCard({ listing }: PropertyCardProps) {
 
         <button
           type="button"
-          className="w-full mt-4 sm:mt-6 py-3 bg-[#eae0cf] text-[#111844] rounded-xl hover:bg-[#4b5694] hover:text-white transition-colors text-sm sm:text-base"
+          className="w-full mt-5 sm:mt-6 py-3 border border-[#111844]/80 text-[#111844] rounded-full hover:bg-[#111844] hover:text-white transition-colors text-sm sm:text-base tracking-wide"
         >
           View Details
         </button>

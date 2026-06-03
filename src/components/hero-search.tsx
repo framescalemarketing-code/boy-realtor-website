@@ -28,26 +28,31 @@ export function HeroSearch({
   onSearchSubmit,
 }: HeroSearchProps) {
   return (
-    <div className="relative flex min-h-[min(100dvh,720px)] sm:min-h-[560px] lg:min-h-[600px] items-center justify-center pt-[4.5rem] sm:pt-20 pb-10 sm:pb-12">
+    <div className="relative flex min-h-[min(100dvh,820px)] sm:min-h-[640px] lg:min-h-[720px] items-center justify-center pt-[4.5rem] sm:pt-24 pb-12 sm:pb-16">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('${HERO_IMAGE}')` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#111844]/60 via-[#111844]/40 to-[#111844]/70" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#0b1030]/75 via-[#111844]/45 to-[#0b1030]/85" />
       </div>
 
       <div className="relative z-10 w-full max-w-4xl px-4 sm:px-6">
-        <div className="text-center mb-6 sm:mb-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-3 sm:mb-4 tracking-tight leading-tight">
-            listedbyjeff.com
+        <div className="text-center mb-8 sm:mb-10">
+          <p className="eyebrow text-[#eae0cf]/90 mb-4 sm:mb-5">
+            San Diego Real Estate
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 sm:mb-5 leading-[1.08]">
+            Find the place you&apos;ll call home
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-[#eae0cf] max-w-2xl mx-auto px-1 leading-relaxed">
-            Your trusted guide to finding your first home in San Diego
+          <div className="mx-auto mb-5 sm:mb-6 h-px w-16 bg-[#eae0cf]/50" />
+          <p className="text-base sm:text-lg md:text-xl text-[#eae0cf] max-w-2xl mx-auto px-1 leading-relaxed font-light">
+            Your trusted guide to finding your first home in San Diego — with
+            Jeff by your side from search to keys in hand.
           </p>
         </div>
 
         <form
-          className="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-2 sm:p-3"
+          className="bg-white/95 backdrop-blur-md rounded-2xl shadow-luxe-lg p-2.5 sm:p-3 ring-1 ring-white/40"
           onSubmit={(e) => {
             e.preventDefault();
             onSearchSubmit();
@@ -68,7 +73,7 @@ export function HeroSearch({
             </div>
             <button
               type="submit"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#111844] text-white text-base sm:text-lg rounded-lg sm:rounded-xl hover:bg-[#4b5694] transition-colors shrink-0"
+              className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 bg-[#111844] text-white text-base sm:text-lg rounded-xl hover:bg-[#4b5694] transition-colors shrink-0 tracking-wide"
             >
               Search
             </button>
@@ -81,10 +86,10 @@ export function HeroSearch({
               key={chip.id}
               type="button"
               onClick={() => onFilterChange(chip.id)}
-              className={`w-full px-4 sm:px-6 py-2.5 sm:py-2 text-sm sm:text-base rounded-lg transition-colors border text-center ${
+              className={`w-full px-4 sm:px-6 py-2.5 text-sm sm:text-base rounded-full transition-colors border text-center ${
                 activeFilter === chip.id
-                  ? "bg-white text-[#111844] border-white"
-                  : "bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-white/40"
+                  ? "bg-[#eae0cf] text-[#111844] border-[#eae0cf] shadow-sm"
+                  : "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 border-white/40"
               }`}
             >
               {chip.label}

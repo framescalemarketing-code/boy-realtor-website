@@ -15,36 +15,38 @@ export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#7288ae]/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#faf8f4]/90 backdrop-blur-md border-b border-[#7288ae]/15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between gap-3">
-          <a href="#" className="flex min-w-0 items-center gap-2 sm:gap-3">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-full bg-[#eae0cf] flex items-center justify-center text-[#111844] border-2 border-[#4b5694]">
-              <span className="text-base sm:text-xl">JL</span>
+          <a href="#" className="flex min-w-0 items-center gap-3 sm:gap-3.5">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-lg bg-[#111844] flex items-center justify-center text-[#eae0cf] ring-1 ring-[#111844]">
+              <span className="font-(family-name:--font-playfair) text-base sm:text-xl tracking-wide">
+                JL
+              </span>
             </div>
             <div className="min-w-0">
-              <div className="text-base sm:text-xl text-[#111844] truncate">
-                listedbyjeff.com
+              <div className="font-(family-name:--font-playfair) text-base sm:text-xl text-[#111844] truncate">
+                listedbyjeff
               </div>
-              <div className="text-[10px] sm:text-xs text-[#4b5694] truncate">
+              <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#7288ae] truncate">
                 San Diego Real Estate
               </div>
             </div>
           </a>
 
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 shrink-0">
+          <div className="hidden lg:flex items-center gap-7 xl:gap-9 shrink-0">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm xl:text-base text-[#111844] hover:text-[#4b5694] transition-colors whitespace-nowrap"
+                className="text-sm text-[#111844] hover:text-[#4b5694] transition-colors whitespace-nowrap tracking-wide"
               >
                 {link.label}
               </a>
             ))}
             <a
               href={contactLink.href}
-              className="px-5 xl:px-6 py-2 bg-[#111844] text-white text-sm xl:text-base rounded-lg hover:bg-[#4b5694] transition-colors whitespace-nowrap"
+              className="px-5 xl:px-6 py-2.5 bg-[#111844] text-white text-sm rounded-full hover:bg-[#4b5694] transition-colors whitespace-nowrap tracking-wide"
             >
               {contactLink.label}
             </a>
@@ -79,7 +81,7 @@ export function SiteHeader() {
             ))}
             <a
               href={contactLink.href}
-              className="px-6 py-3 bg-[#111844] text-white rounded-lg hover:bg-[#4b5694] transition-colors text-center"
+              className="px-6 py-3 bg-[#111844] text-white rounded-full hover:bg-[#4b5694] transition-colors text-center tracking-wide"
               onClick={() => setMobileMenuOpen(false)}
             >
               {contactLink.label}
